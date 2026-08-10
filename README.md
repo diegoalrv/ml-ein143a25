@@ -12,6 +12,7 @@ conducción de la clase).
 | # | Sesión | Tema | Dataset |
 |---|--------|------|---------|
 | 01 | 05-08-2026 | Introducción a ML: ambiente, exploración y primer modelo end-to-end | Wine (`sklearn.datasets.load_wine`) |
+| 02 | 12-08-2026 | Supervisado vs no supervisado: K-means sobre Wine sin etiquetas | Wine (`sklearn.datasets.load_wine`) |
 
 ## Ambiente
 
