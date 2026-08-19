@@ -13,14 +13,16 @@ conducción de la clase).
 |---|--------|------|---------|
 | 01 | 05-08-2026 | Introducción a ML: ambiente, exploración y primer modelo end-to-end | Wine (`sklearn.datasets.load_wine`) |
 | 02 | 12-08-2026 | Supervisado vs no supervisado: K-means sobre Wine sin etiquetas | Wine (`sklearn.datasets.load_wine`) |
+| 03 | 19-08-2026 | Preprocesamiento: escalamiento y regla de oro fit/transform, nulos y categóricas | Wine + Titanic (`seaborn` o `titanic.csv` local) |
 
 ## Ambiente
 
-Python 3 con scikit-learn, pandas, numpy, matplotlib y Jupyter. Los datasets vienen incluidos en
-scikit-learn, no hay que descargar nada.
+Python 3 con scikit-learn, pandas, numpy, matplotlib, seaborn y Jupyter. Los datasets vienen
+incluidos en scikit-learn o seaborn; el Lab 03 trae además `titanic.csv` de respaldo en su carpeta
+por si no hay internet.
 
 ```bash
-pip install scikit-learn pandas numpy matplotlib jupyter
+pip install scikit-learn pandas numpy matplotlib seaborn jupyter
 jupyter notebook
 ```
 
