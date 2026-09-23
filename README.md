@@ -16,6 +16,7 @@ conducción de la clase).
 | 03 | 19-08-2026 | Preprocesamiento: escalamiento y regla de oro fit/transform, nulos y categóricas | Wine + Titanic (`seaborn` o `titanic.csv` local) |
 | 04 | 26-08-2026 | Selección vs extracción de características: `SelectKBest`, PCA y maldición de la dimensionalidad | Wine + Digits (`sklearn.datasets`) |
 | 05 | 02-09-2026 | Train-test split y validación cruzada: varianza del split simple, curva de sobre/subajuste, `cross_val_score`, pipeline completo de cierre de la Unidad 1 | Wine (`sklearn.datasets.load_wine`) |
+| 06 | 23-09-2026 | Regresión lineal y logística: coeficientes, MSE y R², `predict_proba`, frontera de decisión lineal en 2D, logística vs KNN | Diabetes + Breast Cancer (+ Wine en ejercicio propuesto) (`sklearn.datasets`) |
 
 ## Ambiente
 
