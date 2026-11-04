@@ -19,6 +19,7 @@ conducción de la clase).
 | 06 | 23-09-2026 | Regresión lineal y logística: coeficientes, MSE y R², `predict_proba`, frontera de decisión lineal en 2D, logística vs KNN | Diabetes + Breast Cancer (+ Wine en ejercicio propuesto) (`sklearn.datasets`) |
 | 07 | 30-09-2026 | Árboles de decisión y Random Forest: `plot_tree` y Gini, curva de sobre/subajuste con `max_depth` (split y CV), `feature_importances_`, comparación KNN vs logística vs árbol vs bosque | Wine (+ Breast Cancer en ejercicio propuesto) (`sklearn.datasets`) |
 | 10b | 11-11-2026 | Entrenar bien la red (Lab 2 del día doble): GD, momentum, RMSprop y Adam a mano en un valle 2D, optimizadores en la red de dígitos, sobreajuste y remedios uno por uno (L2, L1, BatchNorm, Dropout, early stopping) e informe con 3 semillas e IC95 % bootstrap (requiere `torch`) | Digits (`sklearn.datasets.load_digits`) |
+| 11 | 18-11-2026 | Redes convolucionales: MLP vs CNN, formas capa por capa, filtros y mapas de características, qué hace la ReLU, convolución a mano en NumPy, BatchNorm, Dropout y aumento de datos por lote, transferencia de aprendizaje con ResNet-18 (opcional) (requiere `torch` y `torchvision`) | Fashion-MNIST + CIFAR-10 (opcional) (`torchvision.datasets`, descarga) |
 | 12a | 25-11-2026 | Pronóstico con redes recurrentes (Lab A de la clase alternada): serie inventada cortada en orden y «mañana = hoy», ventanas deslizantes (animación), RNN, LSTM y GRU con la mejor época restaurada, pronóstico recursivo de 100 pasos y cuánta historia mirar (requiere `torch`) | Serie sintética (generada en el notebook) |
 | 12b | 25-11-2026 | Una mini-GAN (Lab B de la clase alternada): falsificador contra policía por turnos, GAN 1D que aprende dos montes (animación), dígitos inventados de 8×8 (opcional), colapso de modos con un policía 10 veces más rápido y tabla de tres escenarios (requiere `torch`) | Dos montes sintéticos + Digits (`sklearn.datasets.load_digits`) |
 
@@ -28,6 +29,8 @@ Python 3 con scikit-learn, pandas, numpy, matplotlib, seaborn y Jupyter. Los dat
 incluidos en scikit-learn o seaborn; el Lab 03 trae además `titanic.csv` de respaldo en su carpeta
 por si no hay internet. El Lab 04 usa `load_digits`, que también viene empaquetado con
 scikit-learn (sin descarga).
+El Lab 11 descarga Fashion-MNIST (unos 30 MB; si fallan los espejos de `torchvision`, lo baja de
+`storage.googleapis.com`) y, en la parte opcional, CIFAR-10 (unos 170 MB) y los pesos de ResNet-18 (unos 45 MB).
 
 ```bash
 pip install scikit-learn pandas numpy matplotlib seaborn jupyter
