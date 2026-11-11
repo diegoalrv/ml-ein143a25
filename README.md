@@ -25,7 +25,8 @@ conducción de la clase).
 
 ## Ambiente
 
-Python 3 con scikit-learn, pandas, numpy, matplotlib, seaborn y Jupyter. Los datasets vienen
+Python 3 (probado con 3.13, solo CPU). Todas las dependencias de los Labs 01 a 14 están en
+`requirements.txt`; desde el Lab 10 se necesita además PyTorch (`torch`). Los datasets vienen
 incluidos en scikit-learn o seaborn; el Lab 03 trae además `titanic.csv` de respaldo en su carpeta
 por si no hay internet. El Lab 04 usa `load_digits`, que también viene empaquetado con
 scikit-learn (sin descarga).
@@ -33,14 +34,14 @@ El Lab 11 descarga Fashion-MNIST (unos 30 MB; si fallan los espejos de `torchvis
 `storage.googleapis.com`) y, en la parte opcional, CIFAR-10 (unos 170 MB) y los pesos de ResNet-18 (unos 45 MB).
 
 ```bash
-pip install scikit-learn pandas numpy matplotlib seaborn jupyter
-jupyter notebook
+pip install -r requirements.txt
+jupyter lab
 ```
 
 Verificación rápida del ambiente:
 
 ```bash
-python3 -c "import sklearn, pandas, numpy, matplotlib; print('ok')"
+python3 -c "import sklearn, pandas, numpy, matplotlib, torch; print('ok')"
 ```
 
 Alternativa sin instalar nada: subir el notebook a [Google Colab](https://colab.research.google.com).

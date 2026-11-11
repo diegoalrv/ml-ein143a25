@@ -1,0 +1,16 @@
+# Machine Learning (EIN143A25) — entorno único para todos los laboratorios (Labs 01 a 14)
+# Probado con Python 3.13, solo CPU. En Colab casi todo viene instalado; cada notebook indica qué falta en su primera celda.
+numpy>=2.0
+scipy>=1.13
+pandas>=2.2
+matplotlib>=3.9
+scikit-learn>=1.5
+seaborn>=0.13
+torch>=2.5
+torchvision>=0.20
+gymnasium>=1.0,<2
+transformers>=4.40
+tokenizers>=0.19
+jupyterlab>=4.0
+ipykernel>=6.29
+nbformat>=5.9
