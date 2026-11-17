@@ -6,3 +6,10 @@ __pycache__/
 
 # Versiones docentes: no se publican
 **/*_docente.ipynb
+
+# Lab 13: modelos, videos y logs van a la Release, no al repo
+release_lab13/
+13/*.log
+13/*.mp4
+13/modelos_mario/
+13/mi_mario.zip

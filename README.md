@@ -23,6 +23,7 @@ conducción de la clase).
 | 11 | 18-11-2026 | Redes convolucionales: MLP vs CNN, formas capa por capa, filtros y mapas de características, qué hace la ReLU, convolución a mano en NumPy, BatchNorm, Dropout y aumento de datos por lote, transferencia de aprendizaje con ResNet-18 (opcional) (requiere `torch` y `torchvision`) | Fashion-MNIST + CIFAR-10 (opcional) (`torchvision.datasets`, descarga) |
 | 12a | 11-11-2026 | Pronóstico con redes recurrentes (Lab A de la clase alternada): serie inventada cortada en orden y «mañana = hoy», ventanas deslizantes (animación), RNN, LSTM y GRU con la mejor época restaurada, pronóstico recursivo de 100 pasos y cuánta historia mirar (requiere `torch`) | Serie sintética (generada en el notebook) |
 | 12b | 11-11-2026 | Una mini-GAN que aprende a dibujar dígitos (Lab B de la clase alternada): falsificador contra policía por turnos, del ruido a los dígitos con el mismo ruido fijo (animación desde el paso 0, antes y después, grilla y curvas de pérdida), ¿salen todos los dígitos? (colapso parcial de modos), reflexión y tabla de tres escenarios; extra opcional: GAN en 1D con dos montes y un policía 10 veces más rápido (requiere `torch`) | Digits (`sklearn.datasets.load_digits`) + dos montes sintéticos (extra) |
+| 13 | 18-11-2026 | Aprendizaje por refuerzo: **Mario aprende a jugar solo** (lab principal). Mario al azar, lo que mira la red (4 pantallas en gris de 84×84), entrenar tu propio Mario con PPO durante 15 minutos (`stable-baselines3`), el Mario del profe entrenado millones de pasos (video de progreso y curva de aprendizaje), explorar vs. explotar y de qué están hechos los puntos. Tiene **modo sin juego** (videos y curva ya grabados) si el juego no se puede instalar. *Extra opcional:* tabla Q en FrozenLake y DQN en CartPole (`Lab13_FrozenLake_CartPole_*.ipynb`) (requiere `torch`, `gym-super-mario-bros` y `stable-baselines3`) | Nivel 1-1 de `gym-super-mario-bros` 9.1 (Gymnasium) + modelos del profe en la Release `lab13-mario` |
 
 ## Ambiente
 
@@ -33,6 +34,7 @@ por si no hay internet. El Lab 04 usa `load_digits`, que también viene empaquet
 scikit-learn (sin descarga).
 El Lab 11 descarga Fashion-MNIST (unos 30 MB; si fallan los espejos de `torchvision`, lo baja de
 `storage.googleapis.com`) y, en la parte opcional, CIFAR-10 (unos 170 MB) y los pesos de ResNet-18 (unos 45 MB).
+El Lab 13 necesita **Python 3.13 o más** (lo pide `gym-super-mario-bros` 9.x, que ya trae el juego: no hay que conseguir nada aparte) y baja de la Release [`lab13-mario`](https://github.com/diegoalrv/ml-ein143a25/releases/tag/lab13-mario) los modelos y videos del Mario del profe (unos 50 MB). Si el juego no se puede instalar (por ejemplo, en un Colab con Python más antiguo), el notebook entra en modo sin juego y muestra los videos ya grabados.
 
 ```bash
 pip install -r requirements.txt

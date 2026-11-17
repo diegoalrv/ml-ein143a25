@@ -14,3 +14,10 @@ tokenizers>=0.19
 jupyterlab>=4.0
 ipykernel>=6.29
 nbformat>=5.9
+# Lab 13 (Mario aprende solo): versiones probadas el 16-11-2026 con Python 3.13.12 (gym-super-mario-bros 9.x pide Python >= 3.13)
+gym-super-mario-bros==9.1.0
+nes-py==9.0.1
+stable-baselines3==2.9.2
+imageio[ffmpeg]==2.38.2
+imageio-ffmpeg==0.8.1
+opencv-python-headless==5.0.0.93
