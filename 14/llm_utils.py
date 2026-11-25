@@ -590,7 +590,9 @@ def describir_foto(foto, pregunta="Describe la imagen.", n_pedacitos=60):
     ax.imshow(foto)
     ax.axis("off")
     plt.show()
-    return Texto(r, AZUL, titulo=f"La IA mira la foto y escribe ({pregunta})")
+    from IPython.display import HTML, display
+    # display explícito: Colab muestra un str devuelto como texto plano, sin su recuadro
+    display(HTML(_caja(f"La IA mira la foto y escribe ({pregunta})", r, AZUL)))
 
 
 def mostrar_galeria():
