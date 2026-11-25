@@ -7,7 +7,9 @@ Si una descarga falla, se entra en MODO SIN RED: las funciones devuelven las sal
 Variables de entorno: LLM_GRABAR=1 graba cada salida en resultados_profe.json (lo usa el profe al
 ejecutar la docente) · LLM_SIN_RED=1 parte directo en modo sin red (para probarlo).
 """
+import functools
 import html
+import inspect
 import json
 import os
 import sys
@@ -135,13 +137,13 @@ def _grabado(funcion, args, calcular):
 
 def _amable(f):
     """En modo sin red, si piden algo que no está grabado, lo dice sin traceback."""
+    @functools.wraps(f)  # así ver_codigo(...) muestra la función de verdad
     def envoltura(*args, **kwargs):
         try:
             return f(*args, **kwargs)
         except SinGrabar:
             print(f"⚠ MODO SIN RED: «{f.__name__}» con estos datos no está entre las salidas grabadas por el profe.\n"
                   "  Prueba con los ejemplos que trae el notebook; la pregunta se puede responder igual.")
-    envoltura.__name__, envoltura.__doc__ = f.__name__, f.__doc__
     return envoltura
 
 
@@ -200,6 +202,25 @@ def _cargar_vlm(repo, **kw):
 
 _CARGADORES = {"base": _cargar_llm, "asistente": _cargar_llm, "fichas": _cargar_st, "clip": _cargar_st,
                "describir": _cargar_vlm}
+
+
+def abrir_modelo(nombre):
+    """Los objetos reales de Hugging Face, para usarlos a mano en el notebook.
+
+    "base" y "asistente" -> (tokenizador, modelo) · "fichas" -> el modelo de fichas
+    "clip" -> [modelo de fotos, modelo de frases] · "describir" -> (procesador, modelo)
+    """
+    try:
+        return _cargar(nombre)
+    except _SinModelo:
+        raise RuntimeError("MODO SIN RED: sin internet no se puede abrir el modelo real. "
+                           "Lee el código de la celda y sigue con la parte siguiente.") from None
+
+
+def ver_codigo(funcion):
+    """Muestra el código de verdad de una herramienta de llm_utils (sin trucos: es lo que corre)."""
+    from IPython.display import Code, display
+    display(Code(inspect.getsource(inspect.unwrap(funcion)), language="python"))
 
 
 def precargar(*nombres):
