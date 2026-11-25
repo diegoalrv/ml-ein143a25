@@ -13,3 +13,9 @@ release_lab13/
 13/*.mp4
 13/modelos_mario/
 13/mi_mario.zip
+
+# Lab 14: salidas grabadas y galería del profe van a la Release lab14-llm, no al repo
+14/resultados_profe.json
+14/galeria_profe.png
+14/pasos_profe.png
+14/galeria_profe/

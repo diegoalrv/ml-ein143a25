@@ -9,7 +9,7 @@ seaborn>=0.13
 torch>=2.5
 torchvision>=0.20
 gymnasium>=1.0,<2
-transformers>=4.40
+transformers>=4.56
 tokenizers>=0.19
 jupyterlab>=4.0
 ipykernel>=6.29
@@ -21,3 +21,12 @@ stable-baselines3==2.9.2
 imageio[ffmpeg]==2.38.2
 imageio-ffmpeg==0.8.1
 opencv-python-headless==5.0.0.93
+# Lab 14 (Por dentro de una IA): versiones probadas el 24-11-2026 con Python 3.13.12, solo CPU
+# (con torch 2.15.0 y transformers 5.24.1)
+sentence-transformers==6.3.0
+ipywidgets==8.1.9
+pillow==13.0.0
+scikit-image==0.26.0
+# Solo para la demo del profe (texto_a_imagen_profe.py, sd-turbo en el Mac)
+diffusers==0.43.0
+accelerate==1.16.0
