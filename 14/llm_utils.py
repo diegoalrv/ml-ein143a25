@@ -219,8 +219,11 @@ def abrir_modelo(nombre):
 
 def ver_codigo(funcion):
     """Muestra el código de verdad de una herramienta de llm_utils (sin trucos: es lo que corre)."""
-    from IPython.display import Code, display
-    display(Code(inspect.getsource(inspect.unwrap(funcion)), language="python"))
+    from IPython.display import HTML, display
+    codigo = html.escape(inspect.getsource(inspect.unwrap(funcion)))
+    # colores fijos: con el resaltado de Pygments, el tema oscuro de Colab dejaba el código casi ilegible
+    display(HTML(f"<pre style='background:#f6f6f4;color:{MARINO};padding:10px 12px;border-radius:6px;"
+                 f"border-left:4px solid {AZUL};font-size:12.5px;line-height:1.35;overflow-x:auto'>{codigo}</pre>"))
 
 
 def precargar(*nombres):
